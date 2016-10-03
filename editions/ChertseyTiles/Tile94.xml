@@ -4,7 +4,9 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title><!-- supply a title --></title>
+        <title>Chertsey Tiles</title>
+        <editor>Charlie Schufreider</editor>
+       <editor>Melody Wauke</editor>
       </titleStmt>
       <publicationStmt>
         <p><!-- supply publication information --></p>

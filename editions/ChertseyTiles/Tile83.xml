@@ -3,8 +3,10 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
-      <titleStmt>
-        <title><!-- supply a title --></title>
+    <titleStmt>
+        <title>Chertsey Tiles</title>
+        <editor>Charlie Schufreider</editor>
+       <editor>Melody Wauke</editor>
       </titleStmt>
       <publicationStmt>
         <p><!-- supply publication information --></p>
