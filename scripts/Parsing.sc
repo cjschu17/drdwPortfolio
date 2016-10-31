@@ -13,7 +13,7 @@ val wordVector = justSchol.map(_.split(" ").filterNot(_.isEmpty))
 
 val allWords = wordVector.flatten
 
-val filteredWords = allWords.filterNot(_.contains("urn")).filterNot(_.contains("f"))
+val filteredWords = allWords.filterNot(_.matches("[A-Za-z0-9]+")).filterNot(_.contains("urn"))
 
 val uniqueWords = filteredWords.groupBy( w => w).map(_._1)
 
