@@ -6,6 +6,20 @@ has a file containing the morphological parsing for every word in the scholia co
 
 import scala.io.Source
 
+def replacement(e: Vector[(String, Array[String])]): Vector[String] = {
+  var line = ""
+  for (t <- e) {
+    for (word <- t._2){
+      for (p <- parsedArrays) {
+        if (word == p(0)) {
+          line += t._1 + "\t" + p(2) + "\n"
+        }
+      }
+    }
+  }
+  line.split("\n").toVector
+}
+
 @main
 def assemble(f: String, data: String) {
 
@@ -36,18 +50,4 @@ val finalParsedText = urns.zip(parsedText)
 for (c <- finalParsedText) {
   println(c._1 + "\t" + c._2)
   }
-
-def replacement(e: Vector[(String, Array[String])]): Vector[String] = {
-  var line = ""
-  for (t <- e) {
-    for (word <- t._2){
-      for (p <- parsedArrays) {
-        if (word == p(0)) {
-          line += t._1 + "\t" + p(2) + "\n"
-        }
-      }
-    }
-  }
-  line.split("\n").toVector
-}
 }
