@@ -23,7 +23,7 @@ val parsedArrays = parseResults.map(_.split("\t"))
 
 //This pairs every word in the unparsed corpus with its parsed counterpart
 //While keeping each word associated with its respective URN identifier
-val urnToParse = replacement(tupleOfWords)
+val urnToParse = replacement(tupleOfWords,parsedArrays)
 
 //Creates a map of URN identifer -> Vector of Parsed entities
 val newlyParsedText = urnToParse.map(_.split("\t")).groupBy(w => w(0)).map{ case (k,v) => (k,v.map(e => e(1)))}
@@ -38,11 +38,11 @@ for (c <- finalParsedText) {
   }
 }
 
-def replacement(e: Vector[(String, Array[String])]): Vector[String] = {
+def replacement(e: Vector[(String, Array[String])],  f: Vector[Array[String]]): Vector[String] = {
   var line = ""
   for (t <- e) {
     for (word <- t._2){
-      for (p <- parsedArrays) {
+      for (p <- f) {
         if (word == p(0)) {
           line += t._1 + "\t" + p(2) + "\n"
         }
