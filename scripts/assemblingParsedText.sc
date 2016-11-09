@@ -45,7 +45,6 @@ def replacement(e: Vector[(String, Array[String])],  f: Vector[Array[String]]): 
       for (p <- f) {
         if (word == p(0)) {
           line += t._1 + "\t" + p(2) + "\n"
-          println(line)
         }
       }
     }
