@@ -7,12 +7,12 @@ has a file containing the morphological parsing for every word in the scholia co
 import scala.io.Source
 
 @main
-def assemble(text: String, data: String) {
+def assemble(f: String, data: String) {
 
 /*These lines import the file containing unparsed scholia text
 and reduces the text to only contain Greek words, void of punctuation and extraneous
 XML mark-up that might have been left behind in the extraction process.*/
-val text = Source.fromFile(text).getLines.toVector
+val text = Source.fromFile(f).getLines.toVector
 val array = text.map(_.split("\t")).filter(_.size == 2)
 val tupleNoPunc = array.map( arr => (arr(0),arr(1).replaceAll( "[\\{\\}\\\\>,\\[\\]\\.·⁑:\"·]+","").split(" ")))
 val tupleOfWords = tupleNoPunc.map( tup => (tup._1,tup._2.filterNot(_.isEmpty).filterNot(_.matches("[A-Za-z0-9]+"))))
@@ -31,7 +31,7 @@ val newlyParsedText = urnToParse.map(_.split("\t")).groupBy(w => w(0)).map{ case
 //Extracts keys and values and assembles them into a tuple.
 val urns = newlyParsedText.keysIterator.toVector
 val parsedText = newlyParsedText.valuesIterator.toVector
-val finalParsedTet = urns.zip(parsedText)
+val finalParsedText = urns.zip(parsedText)
 
 for (c <- finalParsedText) {
   println(c._1 + "\t" + c._2)
