@@ -39,13 +39,12 @@ def assemble(f: String, data: String) {
 
   //Creates a map of URN identifer -> Vector of Parsed entities
   val newlyParsedText = urnToParse.map(_.split("\t")).groupBy(w => w(0)).map{ case (k,v) => (k,v.map(e => e(1)))}
+  val sortedParsedText = newlyParsedText.toSeq.sortBy(_._1).toVector
 
   //Extracts keys and values and assembles them into a tuple.
-  val urns = newlyParsedText.keysIterator.toVector
-  val parsedText = newlyParsedText.valuesIterator.toVector
-  val finalParsedText = urns.zip(parsedText)
 
-  for (c <- finalParsedText) {
+
+  for (c <- sortedParsedText) {
     println(c._1 + "\t" + c._2)
   }
 }
