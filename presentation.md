@@ -16,6 +16,7 @@ Do the different types of scholia correspond to different types of comments? If 
 #Methods#
 
 - Extracted text from XML format
+![XML](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-08%20at%2012.39.29%20AM.png)
 - Parsed through Morpheus 
 
 ---
