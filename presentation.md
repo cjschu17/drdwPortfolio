@@ -46,4 +46,10 @@ Topic eight:
 
 [Full dataset](https://github.com/cjschu17/drdwPortfolio/wiki/Looking-at-the-Data-from-ToPan-Topic-Model---12-6-16)
 
+---
+
+#Next Steps#
+
+- continuing to use this data set in different ways
+- examine the scholia which have weights > .9
 
