@@ -44,8 +44,9 @@ def getMorpheusBy10s(fName: String, initial10 : Int = 0) = {
   // sanity check:  only keep lines that have 2
   // tab-delimited co..umns.
   val filteredArray = scholiaEx.map(s => s.split("\t")).filter(_.size == 2)
+  val just5026Array = filteredArray.filter(_(0).contains("5026"))
   // Extact text content and filter out junk characters and empty entries
-  val justSchol = filteredArray.map( a => a(1).replaceAll( "[\\{\\}\\\\>,\\[\\]\\.·⁑:\"·]+",""))
+  val justSchol = just5026Array.map( a => a(1).replaceAll( "[\\{\\}\\\\>,\\[\\]\\.·⁑;:·\\*\\(\\)\\+\\=\\-“”\"‡]+",""))
   val wordVect = justSchol.map(_.split(" ").filterNot(_.isEmpty))
   val allWords = wordVect.flatten
   val filteredWords = allWords.filterNot(_.matches("[A-Za-z0-9]+")).filterNot(_.contains("urn"))
