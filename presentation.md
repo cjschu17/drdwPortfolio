@@ -35,7 +35,13 @@ Topic eight:
 
 #Observations#
 
-![screenshot2](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-07%20at%2011.47.36%20PM.png)
+###Topic 8: Aristarchus topic!
+
+- Main Scholia: 36 (16%)
+- Intermarginal: 133 (59.1%)
+- Interior: 52 (23.1%)
+- Interlinear: 4 (1.8%)
+- Exterior: 0
 
 
 
