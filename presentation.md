@@ -34,7 +34,7 @@ Topic eight:
 
 ---
 
-[topic weight](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-08%20at%2012.53.33%20AM.png)
+![topic weight](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-08%20at%2012.53.33%20AM.png)
 ---
 #Observations#
 
