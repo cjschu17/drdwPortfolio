@@ -52,11 +52,12 @@ def extractPoS(fName : String) {
   // xml reply to morphological analysis. See
   // notes at top of script.
   val filteredArray = parseTsv.map(s => s.split("\t")).filter(_.size == 2)
+  val noErrorsArray = filteredArray.filterNot(_(1).contains("Error from parsing service."))
 
   // easier to tear the pairs apart and
   // zip our results up with the id column later.
-  val idColumn = filteredArray.map(_(0))
-  val xmlColumn = filteredArray.map(_(1))
+  val idColumn = noErrorsArray.map(_(0))
+  val xmlColumn = noErrorsArray.map(_(1))
 
   // let the formatEntry column do the work
   // of creating a MorphId from an entry node

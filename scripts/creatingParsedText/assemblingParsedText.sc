@@ -22,8 +22,9 @@ def assemble(f: String, data: String) {
   XML mark-up that might have been left behind in the extraction process.*/
   val text = Source.fromFile(f).getLines.toVector
   val array = text.map(_.split("\t")).filter(_.size == 2)
+  val just5026Array = array.filter(_(0).contains("5026"))
   // Tuple of URNs and Lists of words
-  val tupleNoPunc = array.map( arr => (arr(0),arr(1).replaceAll( "[\\{\\}\\\\>,\\[\\]\\.·⁑:\"·]+","").split(" ")))
+  val tupleNoPunc = just5026Array.map( arr => (arr(0),arr(1).replaceAll( "[\\{\\}\\\\>,\\[\\]\\.·⁑;:·\\*\\(\\)\\+\\=\\-“”\"‡  ]+","").split(" ")))
   val tupleOfWords = tupleNoPunc.map( tup => (tup._1,tup._2.filterNot(_.isEmpty).filterNot(_.matches("[A-Za-z0-9]+"))))
 
   /*This prepares the data from the morphological parser, read from 3 tab-delimited columns.*/
