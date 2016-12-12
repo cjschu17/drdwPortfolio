@@ -1,3 +1,9 @@
+//This script allows you to enter in a version of Iliadic scholia that is separate such that every 
+//line of the plain text file is a different scholia. From that text file, you can find out the frequency of the
+//types of scholia in that particular file. 
+
+//Usage: amm fileName
+
 import scala.io.Source
 
 @main
@@ -5,7 +11,7 @@ def scholiaBreakdown (file: String) {
 
   val origFile = Source.fromFile(file).getLines.toVector
 
-  val totalScholia: Double = origFile.size - 10
+  val totalScholia: Double = origFile.size 
 
   val mainScholia: Double = origFile.filter(_.contains("6.msA.")).size
 
