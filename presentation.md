@@ -30,11 +30,11 @@ Do the different types of scholia correspond to different types of comments? If 
 #Topic Modeling with ToPan#
 
 Topic eight: 
-![screenshot](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-07%20at%201.04.08%20AM.png)
+![screenshot](https://github.com/cjschu17/drdwPortfolio/blob/master/images/DRDW-presentation/Screen%20Shot%202016-12-07%20at%201.04.08%20AM.png)
 
 ---
 
-![topic weight](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-08%20at%201.03.37%20AM.png)
+![topic weight](https://github.com/cjschu17/drdwPortfolio/blob/master/images/DRDW-presentation/Screen%20Shot%202016-12-08%20at%201.03.37%20AM.png)
 ---
 #Observations#
 
