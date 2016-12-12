@@ -1,7 +1,7 @@
 #!/usr/bin/env amm
 
 @main
-def zipf(f: String) {
+def zipf(f: String, num: Int) {
 
 	import scala.io.Source
 
@@ -15,7 +15,7 @@ def zipf(f: String) {
 
 	val sorted = wordfreqs.toSeq.sortBy(_._2).toVector
 
-  val mostFreqWords = sorted.takeRight(252).map(_._1)
+	val mostFreqWords = sorted.takeRight(num).map(_._1)
 
 	for (kvpair <- mostFreqWords) {
 		println(kvpair)
