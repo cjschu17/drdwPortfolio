@@ -7,7 +7,7 @@ def scholiaBreakdown (folder: String) {
 
   for (file <- nameFile) {
 
-    val origFile = Source.fromFile("TableFolder/" + file).getLines.toVector
+    val origFile = Source.fromFile("editions/Scholia/ThetaTableAnalysis(Portfolio4)/WeightedScholiaByTopic" + file).getLines.toVector
 
     val totalScholia: Double = origFile.size
 
