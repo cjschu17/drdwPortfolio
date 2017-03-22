@@ -16,7 +16,7 @@ Do the different types of scholia correspond to different types of comments? If 
 #Methods#
 
 - Extracted text from XML format
-![XML](https://github.com/cjschu17/drdwPortfolio/blob/master/Screen%20Shot%202016-12-08%20at%2012.39.29%20AM.png)
+![XML](drdwPortfolio/images/DRDW-presentation/Screen Shot 2016-12-08 at 12.39.29 AM.png)
 - Parsed through Morpheus 
 
 ---
@@ -35,7 +35,7 @@ Topic eight:
 ---
 
 ![topic weight](https://github.com/cjschu17/drdwPortfolio/blob/master/images/DRDW-presentation/Screen%20Shot%202016-12-08%20at%201.03.37%20AM.png)
----
+--- 
 #Observations#
 
 ###Topic 8: Aristarchus topic!
